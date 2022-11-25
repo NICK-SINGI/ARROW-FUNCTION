@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Arrow function</h1>
+
+<p>trial "this" </p>
+
+<p>On Click button "hello" is excecuted </p>
+
+<button id="btn">Click Me!</button>
+
+<p id="trial"></p>
+
+<script>
+let hello= "";
+
+hello = () => {
+  document.getElementById("trial").innerHTML += this;
+}
+
+//The window object calls the function:
+window.addEventListener("load", hello);
+
+//A button object calls the function:
+document.getElementById("btn").addEventListener("click", hello);
+</script>
+
+</body>
+</html>
